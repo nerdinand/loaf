@@ -220,7 +220,7 @@ For example, you can add the following semantic markup to show breadcrumbs using
 
 ```erb
 <nav aria-label="breadcrumb">
-  <ol class='breadcrumbs'>
+  <ol class='breadcrumb'>
     <% breadcrumb_trail do |crumb| %>
       <li class="<%= crumb.current? ? 'current' : '' %>">
         <%= link_to crumb.name, crumb.url, (crumb.current? ? {'aria-current' => 'page'} : {}) %>
@@ -234,7 +234,7 @@ For example, you can add the following semantic markup to show breadcrumbs using
 For bootstrap,
 ```erb
 <nav aria-label="breadcrumb">
-  <ol class='breadcrumbs'>
+  <ol class='breadcrumb'>
     <% breadcrumb_trail do |crumb| %>
       <li class="breadcrumb-item <%= crumb.current? ? 'active' : '' %>">
         <%= link_to_unless crumb.current?, crumb.name, crumb.url, (crumb.current? ? {'aria-current' => 'page'} : {}) %>
